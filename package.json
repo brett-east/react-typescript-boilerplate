@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "ts-node server/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
     "@types/node": "^13.7.1",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "@types/webpack": "^4.41.6",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",

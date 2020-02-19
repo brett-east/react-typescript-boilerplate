@@ -1,15 +1,14 @@
 module.exports = {
-  mode: "production",
-  entry: './src/index.tsx',
+  mode: 'production',
+  entry: './src',
   output: {
     path: __dirname,
-    filename: './dist/main.js'
+    filename: './dist/main.js',
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"]
+    extensions: ['.ts', '.tsx', '.js', '.json', '.jsx'],
   },
-
   module: {
     rules: [
       {
@@ -17,15 +16,15 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "ts-loader"
-          }
-        ]
+            loader: 'ts-loader',
+          },
+        ],
       },
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
-        loader: "source-map-loader"
-      }
-    ]
+        loader: 'source-map-loader',
+      },
+    ],
   },
 };

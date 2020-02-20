@@ -1,9 +1,12 @@
+import HtmlWebpackPlugin = require('html-webpack-plugin');
+import path = require('path');
+
 module.exports = {
   mode: 'production',
   entry: './src',
   output: {
-    path: __dirname,
-    filename: './dist/main.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
   },
   devtool: 'source-map',
   resolve: {
@@ -27,4 +30,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/index.html'),
+    }),
+  ],
 };

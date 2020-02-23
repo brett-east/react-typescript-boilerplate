@@ -21,10 +21,14 @@ module.exports = {
   env: {
     node: true,
     browser: true,
+    jest: true,
   },
   rules: {
     // this allows JSX in .tsx files
     'react/jsx-filename-extension': ['error', { 'extensions': ['.tsx', '.jsx'] }],
+
+    // don't error for devDependencies
+    'import/no-extraneous-dependencies': ['error', { 'devDependencies': ['**/*.test.ts', '**/*.test.tsx'] }],
 
     // this takes away the need to include the listed extensions when importing files
     // there is a bug here, where the third argument (the object), is not honored

@@ -30,6 +30,9 @@ module.exports = {
     // don't error for devDependencies
     'import/no-extraneous-dependencies': ['error', { 'devDependencies': ['**/*.test.ts', '**/*.test.tsx'] }],
 
+    // allow any, sometimes you need it to get to the bottom of a bug/type
+    'no-explicit-any': '0',
+
     // this takes away the need to include the listed extensions when importing files
     // there is a bug here, where the third argument (the object), is not honored
     'import/extensions': ['error', 'never', {

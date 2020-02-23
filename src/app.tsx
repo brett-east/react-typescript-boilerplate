@@ -1,9 +1,13 @@
 import React from 'react';
 
 import { Hello } from './components/hello';
+import AddCount from './components/addCount';
 
-const App = (): JSX.Element => (
-  <Hello firstName="john" lastName="smith" />
+const App = () => (
+  <div>
+    <Hello firstName="john" lastName="smith" />
+    <AddCount />
+  </div>
 );
 
 export default App;

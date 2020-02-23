@@ -26,6 +26,8 @@ module.exports = {
     // this allows JSX in .tsx files
     'react/jsx-filename-extension': ['error', { 'extensions': ['.tsx', '.jsx'] }],
 
+    'no-explicit-any': '0',
+
     // this takes away the need to include the listed extensions when importing files
     // there is a bug here, where the third argument (the object), is not honored
     'import/extensions': ['error', 'never', {
